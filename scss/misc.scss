@@ -1,0 +1,64 @@
+@import 'normalize-scss-6.0.0/sass/normalize';
+@include normalize();
+@import 'constants';
+@import 'navbar';
+@import 'footer';
+html, body {margin:0;
+            padding:0;
+            width:100%;
+            height:100%;
+}
+
+/* background image */
+.background {
+  background: url("http://static.flickr.com/98/240959910_f45675dc51.jpg") no-repeat;
+  background-size: cover;
+  background-color: $green;
+  background-position: top right;
+  z-index :-1;
+  border: 2px solid $blue;
+}
+
+.headerinfo {color :$green;
+             margin-top:8%;
+             padding-top:5%;
+             text-shadow: 2px 2px #262626}
+/* the three div at the bottom, location, description and wind */
+
+#temp, #temp2 {color:$green;
+            margin-top : 5%;
+            padding-top : 1%;
+            font-size:32px;
+            padding-left:0px;
+            text-align:center;
+}
+
+.icon {color:#ffffcc;
+       padding: 0;
+}
+#location,#location2 {font-size:20px;}
+
+.weather-info {
+  margin:0px;
+  padding:0px;
+}
+
+@media (min-width: 320px){
+  #temp,#temp2 {
+    font-size:1.5em;
+  }
+}
+@media (min-width: 480px){
+  #temp,#temp2 { text-align:left;}
+  #img,#img2 {margin-left:80px;}
+}
+@media(min-width: 768px){
+  #temp,#temp2 {text-align:left;}
+  #img,#img2 {margin-left: 7%;}
+}
+@media(min-width: 992px){
+  #img,#img2 {margin-left: 20%}
+}
+@media(min-width: 1200px){
+  #img,#img2 {margin-left:30%}
+}

@@ -1,0 +1,24 @@
+@import 'normalize-scss-6.0.0/sass/normalize';
+@include normalize();
+@import 'constants';
+@import 'navbar';
+@import 'footer';
+html, body {margin:0;
+            padding:0;
+            width:100%;
+            height:100%;
+}
+
+.gamediv {height:500px;
+          padding:0;
+          margin:0;
+          background-color:#ffffff;}
+.bearpng {position:absolute;}
+
+
+@media (min-width: 768px){
+  #rightside{border-left:1px solid $blue;}
+}
+@media (max-width: 768px) {
+  #rightside{border-top:1px solid $blue;}
+}

@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="en-US">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title class="text-center">Peep Power- misc</title>
+<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<link rel="stylesheet" href="style/misc.css">
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="https://use.fontawesome.com/1e9f243857.js"></script>
+<script src="script/misc.js"></script>
+
+
+</head>
+<body>
+  <nav class="navbar navbar-default" data-spy="affix" data-offset-top="300">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <li><a href="index.html">Home</a></li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">About <span class="caret"></span><span class="sr-only">(current)</span></a>
+          <ul class="dropdown-menu">
+            <li><a href="index.html#purpose">Purpose of Site</a></li>
+            <li><a href="index.html#history">Peep History</a></li>
+            <li><a href="index.html#philosophy">Peep Philosophy</a></li>
+            <li><a href="index.html#meetPeeps">Meet the Peeps</a></li>
+            <li><a href="index.html#peepHeros">Peep Heroes</a></li>
+          </ul>
+        </li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Media<span class="caret"></span><span class="sr-only">(current)</span></a>
+          <ul class="dropdown-menu">
+            <li><a href="photos.html">Photo Albums<span class="sr-only">(current)</span></a></li>
+            <li><a href="movies.html">Movies</a></li>
+            <li><a href="contruction.html">Peep Popular Post</a></li>
+            <li><a href="contruciton.html">Ship Log</a></li>
+          </ul>
+        </li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Games <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="games.html#TicTacToe">Tic-Tac-Toe</a></li>
+            <li><a href="games.html#Simon">Simon</a></li>
+            <li><a href="games.html#Memory">Memory</a></li>
+            <li><a href="games.html#CatchPeep">Catch a Peep</a></li>
+            <li><a href="games.html#matching">Matching</a></li>
+            <li><a href="games.html#findPeep">Find a Peep</a></li>
+            <li><a href="games.html#drawWithPeep">Draw with a Peep</a></li>
+          </ul>
+        </li>
+        <li class="dropdown active">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Misc. <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="#talkToPeep">Talk to a Peep</a></li>
+            <li><a href="#pictureWithPeep">Picture with a peep</a></li>
+            <li><a href="#clock">Clock</a></li>
+            <li><a href="#calculator">Calculator</a></li>
+            <li><a href="#visit">Will the peeps visit?</a></li>
+          </ul>
+        </li>
+      </ul>
+
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+<section class='container-fluid'>
+  <section id="talktoPeep" class="row anchor">
+    <h2>Talk to a peep</h2>
+  </section>
+  <section id="pictureWithPeep" class="row anchor">
+    <h2>Your picture with a peep</h2>
+  </section>
+  <section id="clock" class="row anchor">
+    <h2>Clock</h2>
+  </section>
+  <section id="calculator" class="row anchor">
+    <h2>Calculator</h2>
+  </section>
+  <section id="visit" class="row anchor">
+    <h2>Do the peeps want to visit you?</h2>
+    <div class="col-xs-12 col-sm-6 background">
+    <div class = "headerinfo">
+      <h1 class = "text-center">Peep Weather</h1>
+      <h3 class = "text-center" id="location"></h3>
+    </div>
+    <div class = "weather-info container row">
+      <div class = "col-xs-6 col-sm-3 icon"></div>
+      <div class = "col-xs-6 col-sm-2" >
+      <p id = "temp"></p>
+      </div>
+    </div>
+  </div>
+  <div  id = "visitinfo" class="col-xs-12 col-sm-6 background">
+  <div class = "headerinfo">
+    <h1 class = "text-center">Your Weather</h1>
+    <h3 class = "text-center" id="location2"</h3>
+  </div>
+  <div class = "weather-info container row">
+    <div class = "col-xs-6 col-sm-3 icon"></div>
+    <div class = "col-xs-6 col-sm-2" >
+    <p id = "temp2"></p>
+    </div>
+  </div>
+</div>
+
+</section>
+
+</section>
+<footer>
+  <div class="row"><!--hidden-sm-down not working !!!!!!!!!!!!!!!!!!!-->
+    <div class="col-xs-2">
+      <img src="images/logo.jpg" alt="fish logo">
+    </div>
+    <div class="col-xs-10 col-md-5">
+      <p>Mission statement:  To indoctrinate the human race into peepism using a wide assortment of methods
+      including but not limited to fake news, game addiction, social psychology, and the generation of
+      behavioral algorithms.</p>
+    </div>
+    <div class="col-xs-12 col-md-5">
+      <ul>
+        <li> <a href="privacyPolicy.html">privacy policy </a></li>
+        <li> <a href="termsOfUse.html">terms of use</a> </li>
+        <li>Created by: Tanya Gendreau</li>
+        <li> contact: tanyagendreau@gmail.com </li>
+        <li> <a href="https://github.com/tanya53/tanya53.github.io">source code</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="row">
+    <a class="col-xs-4 col-sm-2" href ="https://facebook.com"><i class="fa fa-facebook-official fa-3x" aria-hidden="true"></i></a>
+    <a class="col-xs-4 col-sm-2" href="https://github.com"><i class="fa fa-github fa-3x" aria-hidden="true"></i></a>
+    <a class="col-xs-4 col-sm-2" href="https://linkedin.com"><i class="fa fa-linkedin fa-3x" aria-hidden="true"></i></a>
+    <a class="col-xs-4 col-sm-2" href="https://plus.google.com"><i class="fa fa-google-plus-official fa-3x" aria-hidden="true"></i></a>
+    <a class="col-xs-4 col-sm-2" href="https://freecodecamp.com"><i class="fa fa-free-code-camp fa-3x" aria-hidden="true"></i></a>
+    <a class="col-xs-4 col-sm-2" href="https://twitter.com"><i class="fa fa-twitter fa-3x" aria-hidden="true"></i></a>
+  </div>
+  <div>&copy;2017 - Tanya Gendreau</div>
+</footer>
+</body>
+</html>
