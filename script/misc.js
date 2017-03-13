@@ -34,8 +34,10 @@
             console.log("point 1",weather.current_observation.temp_f);
             console.log("point 2 ",weather.current_observation.icon_url);
             temp = weather.current_observation.temp_f;
+            str= weather.current_observation.icon_url;
+            var https_str = str.replace("http:","https:");
             $("#temp").text(weather.current_observation.temp_f + ' F');
-            $("#icon1").html("<p><img id='img1' src="+weather.current_observation.icon_url+" alt = 'weather icon' height = '150' width='150'></p>");
+            $("#icon1").html("<p><img id='img1' src="+https_str+" alt = 'weather icon' height = '150' width='150'></p>");
 
         var str = "https://api.wunderground.com/api/9865d5d1f3370595/conditions/q/"+location.region+"/"+location.city+".json";
         $.getJSON(str,function(weather){
