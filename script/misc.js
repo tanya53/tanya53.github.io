@@ -4,11 +4,11 @@
        latitude and longitude */
     function getLocation(){
 
-
+//make sure you check for the country
     $.getJSON("https://ipinfo.io",function(location){
       $("#location").text("Bemidji, Minnesota");
       $("#location2").text(location.city+", " + location.region);
-      console.log("location ",location.dity,location.region);
+      console.log("location ",location.city,location.region,location.country);
     });
     }
 
@@ -21,27 +21,27 @@
       const PEEPLONG = -94.8858;
 
 
-      getLocation();
+      //getLocation();
+      $.getJSON("https://ipinfo.io",function(location){
+        $("#location").text("Bemidji, Minnesota");
+        $("#location2").text(location.city+", "+location.region);
 
       /* all the data is parsed from the openweathermap.org
          site, using the lat and long as input */
-      var str = "https://api.openweathermap.org/data/2.5/weather?lat="+ PEEPLAT + "&lon=" + PEEPLONG +"&APPID=0adedd5f2ad9aced6e02a4c438f532cc"
-      $.getJSON(str,function(weather){
-            var temp = Number(weather.main.temp);
-            temp = (temp - 273.15) * 1.8 + 32;
-            temp = Math.round(temp);
-            $("#temp").text(temp + ' F');
-            var iconval = weather.weather[0].icon;
-            $(".icon").html("<p><img id='img1' src='https://openweathermap.org/img/w/"+iconval+".png' alt = 'weather icon' height = '150' width='150'></p>");
 
-        var str = "https://api.openweathermap.org/data/2.5/weather?lat="+ latitude + "&lon=" + longitude +"&APPID=0adedd5f2ad9aced6e02a4c438f532cc";
+      var str = "https://api.wunderground.com/api/9865d5d1f3370595/conditions/q/Minnesota/Bemidji.json";
+      $.getJSON(str,function(weather){
+            console.log("point 1",weather.current_observation.temp_f);
+            console.log("point 2 ",weather.current_observation.icon_url);
+            temp = weather.current_observation.temp_f;
+            $("#temp").text(weather.current_observation.temp_f + ' F');
+            $("#icon1").html("<p><img id='img1' src="+weather.current_observation.icon_url+" alt = 'weather icon' height = '150' width='150'></p>");
+
+        var str = "https://api.wunderground.com/api/9865d5d1f3370595/conditions/q/"+location.region+"/"+location.city+".json";
         $.getJSON(str,function(weather){
-              var temp2 = Number(weather.main.temp);
-              temp2 = (temp2 - 273.15) * 1.8 + 32;
-              temp2 = Math.round(temp2);
-              $("#temp2").text(temp2 + ' F');
-              var iconval = weather.weather[0].icon
-              $(".icon").html("<p><img id = 'img2' src='https://openweathermap.org/img/w/"+iconval+".png' alt = 'weather icon' height = '150' width='150'></p>");
+              temp2 = weather.current_observation.temp_f
+              $("#temp2").text(weather.current_observation.temp_f);
+              $("#icon2").html("<p><img id = 'img2' src="+weather.current_observation.icon_url+" alt = 'weather icon' height = '150' width='150'></p>");
               if (temp < temp2){
                 $("#visitinfo").after("<div style = 'color:red;font-size:2em;' class='col-xs-12'>Peepmobile loaded, stock your frig!!!!</div>")
               }else {
@@ -50,6 +50,6 @@
           });
         });
     });
-
+});
     }
   })
