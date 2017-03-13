@@ -41,9 +41,11 @@
 
         var str = "https://api.wunderground.com/api/9865d5d1f3370595/conditions/q/"+location.region+"/"+location.city+".json";
         $.getJSON(str,function(weather){
-              temp2 = weather.current_observation.temp_f
-              $("#temp2").text(weather.current_observation.temp_f);
-              $("#icon2").html("<p><img id = 'img2' src="+weather.current_observation.icon_url+" alt = 'weather icon' height = '150' width='150'></p>");
+              temp2 = weather.current_observation.temp_f;
+              str = weather.current_observation.icon_url;
+              var https_str = str.replace("http:","https:");
+              $("#temp2").text(weather.current_observation.temp_f + ' F');
+              $("#icon2").html("<p><img id = 'img2' src="+https_str+" alt = 'weather icon' height = '150' width='150'></p>");
               if (temp < temp2){
                 $("#visitinfo").after("<div style = 'color:red;font-size:2em;' class='col-xs-12'>Peepmobile loaded, stock your frig!!!!</div>")
               }else {
