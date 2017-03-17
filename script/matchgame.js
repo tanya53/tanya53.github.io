@@ -29,14 +29,18 @@ function shuffle(){
 
 function selectCard(){
   //we do nothing if there are already two card flipped.
-  console.log($(".card-flipped").length);
+  console.log("length ",$(".card-flipped").length);
   if ($(".card-flipped").length > 1){
+    console.log("*****point 1");
     return;
   }
+  console.log("added card-flipped class");
+  console.log(this);
   $(this).addClass("card-flipped");
   //check the pattern of bloth flipped card 0.7s later
   if ($(".card-flipped").length ===2){
-    setTimeout(checkPattern(),700);
+    console.log("point 2");
+    setTimeout(checkPattern,1500);
   }
 }
 
@@ -76,7 +80,6 @@ $(function(){
     $(this).css("transform","translateX(" + x +"px) translateY(" +y+"px)");
     //get a pattern from the shuffled deck
     var pattern = matchingGame.deck.pop();
-    console.log("pattern ",pattern);
     //visually apply the pattern on the card's back side.
     $(this).find(".back").addClass(pattern);
 
