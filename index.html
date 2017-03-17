@@ -39,11 +39,11 @@
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">About <span class="caret"></span></a>
           <ul class="dropdown-menu">
-            <li><a href="#purpose">Purpose of Site</a></li>
             <li><a href="#history">Peep History</a></li>
             <li><a href="#philosophy">Peep Philosophy</a></li>
             <li><a href="#meetPeeps">Meet the Peeps</a></li>
             <li><a href="#peepHeros">Peep Heroes</a></li>
+            <li><a href="#purpose">Purpose of Site</a></li>
           </ul>
         </li>
         <li class="dropdown">
@@ -63,7 +63,7 @@
             <li><a href="games.html#Memory">Memory</a></li>
             <li><a href="games.html#CatchPeep">Catch a Peep</a></li>
             <li><a href="games.html#FindPeep">Find a Peep</a></li>
-            <li><a href="games.html#DrawWithPeep">Draw with a Peep</a></li>
+            <li><a href="https://tigger.herokuapp.com/">Draw with a Peep</a></li>
             <li><a href="games.html#FindOddPeep">Find the extra peep</a></li>
           </ul>
         </li>
@@ -75,6 +75,7 @@
             <li><a href="misc.html#clock">Clock</a></li>
             <li><a href="misc.html#calculator">Calculator</a></li>
             <li><a href="misc.html#visit">Will the peeps visit?</a></li>
+            <li><a href="misc.html#where">Where are the peeps?</a></li>
           </ul>
         </li>
       </ul>
@@ -84,35 +85,6 @@
 </nav>
 
 <div class="container">
-  <section id="purpose" class="row anchor">
-    <h2>Purpose of Site</h2>
-    <p>Welcome to Peep Power.  This site is an illustration of what a person can learn by
-      taking numerous free on-line classes from Coursera, Udacity, edX , freecodecamp and
-      many other on-line tutorials.  I was loyal to them all until they started to charge
-      a fee to gain access to all the material, I understand their business plan, but I have
-      an education budget of zero.  So now my loyalty is to edX and freecodecamp.  This
-      site illustrates what I have learned after many, many hours or thousands of life moments.
-      I would like to say it was fun, which it was, but at times it was some of the most
-      frustrating hours of my life, just ask my family members who had to deal with me.</p>
-    <p>The peeps were a creation after my children moved out of the house and got on with
-      their own lives. There now was no one to blame for the light left on, using the
-      last of the milk, the general mess, so the Peeps came to the rescue.  I always said
-      I lived in my own universe, one that periodically intersected with the universes of
-      others.  To have content for this project this universe has become the peeps and they
-      are continuing to evolve, as more content is needed.
-    </p>
-    <p>The pages were designed using HTML5, scss and javascript.  I also used normalize.scss to
-      insure a common starting point, autoprefixer, and gulp.  All the html and css code was
-      validated using W3's validator.  I used colorsafe.co to help select th color palatte for
-      the site.  The accessiblity was checked using wave.webaim.org.   The static part of the site
-      is hosted on github.  The dynamic pages will be hosted on heroku. The server code uses nodejs
-      and express.  Handlebars was used for the templates for the dynamic web pages. Several
-      of the pages uses MongoDB and access various APIs. All the code in located on
-      https://github.com/tanya53/tanya53.github.io.  All the photos without credits were taken
-      by myself or by other members of my family.
-    </p>
-  </section>
-
   <section id="history" class="row anchor">
     <h2>Peep History</h2>
   </section>
@@ -574,14 +546,41 @@
       <img class="col-xs-12 col-sm-10 col-sm-offset-1" alt="Ursula Unicorn" src="images/ursula.jpg"/>
     </section>
   </section>
-
+  <section id="purpose" class="row anchor">
+    <h2>Purpose of Site</h2>
+    <p>Welcome to Peep Power.  This site is an illustration of what a person can learn by
+      taking numerous free on-line classes from Coursera, Udacity, edX , freecodecamp and
+      many other on-line tutorials.  I was loyal to them all until they started to charge
+      a fee to gain access to all the material, I understand their business plan, but I have
+      an education budget of zero.  So now my loyalty is to edX and freecodecamp.  This
+      site illustrates what I have learned after many, many hours or thousands of life moments.
+      I would like to say it was fun, which it was, but at times it was some of the most
+      frustrating hours of my life, just ask my family members who had to deal with me.</p>
+    <p>The peeps were a creation after my children moved out of the house and got on with
+      their own lives. There now was no one to blame for the light left on, using the
+      last of the milk, the general mess, so the Peeps came to the rescue.  I always said
+      I lived in my own universe, one that periodically intersected with the universes of
+      others.  To have content for this project this universe has become the peeps and they
+      are continuing to evolve, as more content is needed.
+    </p>
+    <p>The pages were designed using HTML5, scss and javascript.  I also used normalize.scss to
+      insure a common starting point, autoprefixer, and gulp.  All the html and css code was
+      validated using W3's validator.  I used colorsafe.co to help select th color palatte for
+      the site.  The accessiblity was checked using wave.webaim.org.   The static part of the site
+      is hosted on github.  The dynamic pages will be hosted on heroku. The server code uses nodejs
+      and express.  Handlebars was used for the templates for the dynamic web pages. Several
+      of the pages uses MongoDB and access various APIs. All the code in located on
+      https://github.com/tanya53/tanya53.github.io.  All the photos without credits were taken
+      by myself or by other members of my family.
+    </p>
+  </section>
 </div>
 
 
 <footer>
   <div class="row"><!--hidden-sm-down not working !!!!!!!!!!!!!!!!!!!-->
     <div class="col-xs-2">
-      <img src="images/logo.jpg" alt="fish logo">
+      <img id = "logo" src="images/logo.jpg" alt="fish logo">
     </div>
     <div class="col-xs-10 col-md-5">
       <p>Mission statement:  To indoctrinate the human race into peepism using a wide assortment of methods
