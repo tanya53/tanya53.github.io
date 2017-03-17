@@ -1,21 +1,22 @@
 <!doctype html>
-<html lang="en-US">
+<html lang="en-US"  style="width:100%;height:100%;">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<title class="text-center">Peep Power- misc</title>
-<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+  <title class="text-center">Peep Power- misc</title>
+  <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
 
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-<link rel="stylesheet" href="style/misc.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="style/misc.css">
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-<script src="https://use.fontawesome.com/1e9f243857.js"></script>
-<script src="script/misc.js"></script>
-
-
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="https://use.fontawesome.com/1e9f243857.js"></script>
+  <script src="script/misc.js"></script>
+  <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBaXIai9c9cAUgt7Whw2h15HCNCaKWhlOo&callback=initMap">
+  </script>
 </head>
 <body>
   <nav class="navbar navbar-default" data-spy="affix" data-offset-top="300">
@@ -74,6 +75,7 @@
             <li><a href="#clock">Clock</a></li>
             <li><a href="#calculator">Calculator</a></li>
             <li><a href="#visit">Will the peeps visit?</a></li>
+            <li><a href="#where">Where are the peeps?</a></li>
           </ul>
         </li>
       </ul>
@@ -97,37 +99,50 @@
   <section id="visit" class="row anchor">
     <h2>Do the peeps want to visit you?</h2>
     <div class="col-xs-12 col-sm-6 background">
-    <div class = "headerinfo">
-      <h1 class = "text-center">Peep Weather</h1>
-      <h3 class = "text-center" id="location"></h3>
-    </div>
-    <div class = "weather-info container row">
-      <div class = "col-xs-6 col-sm-3 icon" id="icon1"></div>
-      <div class = "col-xs-6 col-sm-2" >
-      <p id = "temp"></p>
+      <div class = "headerinfo">
+        <h1 class = "text-center">Peep Weather</h1>
+        <h3 class = "text-center" id="location"></h3>
+      </div>
+      <div class = "weather-info container row">
+        <div class = "col-xs-6 col-sm-3 icon" id="icon1"></div>
+        <div class = "col-xs-6 col-sm-2" >
+          <p id = "temp"></p>
+        </div>
       </div>
     </div>
-  </div>
-  <div  id = "visitinfo" class="col-xs-12 col-sm-6 background">
-  <div class = "headerinfo">
-    <h1 class = "text-center">Your Weather</h1>
-    <h3 class = "text-center" id="location2"</h3>
-  </div>
-  <div class = "weather-info container row">
-    <div class = "col-xs-6 col-sm-3 icon" id = "icon2"></div>
-    <div class = "col-xs-6 col-sm-2" >
-    <p id = "temp2"></p>
+    <div  id = "visitinfo" class="col-xs-12 col-sm-6 background">
+      <div class = "headerinfo">
+        <h1 class = "text-center">Your Weather</h1>
+        <h3 class = "text-center" id="location2"</h3>
+      </div>
+      <div class = "weather-info container row">
+        <div class = "col-xs-6 col-sm-3 icon" id = "icon2"></div>
+        <div class = "col-xs-6 col-sm-2" >
+          <p id = "temp2"></p>
+        </div>
+      </div>
     </div>
-  </div>
+  </section>
+<div class="container">
+
+<section id="where" class="row anchor">
+  <header>
+    <h2 >Are there any peeps near you? Just take a gander at the map.</h2>
+    <p>The peeps are keeping track of each other by marking their current location
+      on google maps.  As you can see the peeps can move rapidly, considering that
+      the peep mobiles travel faster then the speed of light. They also keep track
+      of the location of the newly landed stardust tumblers (known to humans as
+      micrometeorites).  They need to make sure they sweep in and gather them up
+      before the scientists from such places as the Imperial College of London accidently
+      collect them in their search for micrometeorites and alien life forms. </p>
+  </header>
+    <div id="map" class="row"></div>
+</section>
 </div>
-
-</section>
-
-</section>
 <footer>
-  <div class="row"><!--hidden-sm-down not working !!!!!!!!!!!!!!!!!!!-->
+  <div class="row">
     <div class="col-xs-2">
-      <img src="images/logo.jpg" alt="fish logo">
+      <img id = "logo" src="images/logo.jpg" alt="fish logo">
     </div>
     <div class="col-xs-10 col-md-5">
       <p>Mission statement:  To indoctrinate the human race into peepism using a wide assortment of methods
@@ -154,5 +169,6 @@
   </div>
   <div>&copy;2017 - Tanya Gendreau</div>
 </footer>
+
 </body>
 </html>
