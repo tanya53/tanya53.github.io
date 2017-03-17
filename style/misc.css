@@ -477,7 +477,7 @@ footer {
   padding-top: 25px;
   margin-top: 2em; }
 
-div > img {
+#logo {
   width: auto;
   height: auto;
   max-width: 100%;
@@ -493,12 +493,11 @@ li a, li a:hover {
 html, body {
   margin: 0;
   padding: 0;
-  width: 100%;
   height: 100%; }
 
 /* background image */
 .background {
-  background: url("http://static.flickr.com/98/240959910_f45675dc51.jpg") no-repeat;
+  background: url("https://static.flickr.com/98/240959910_f45675dc51.jpg") no-repeat;
   background-size: cover;
   background-color: #cdfce5;
   background-position: top right;
@@ -554,3 +553,7 @@ html, body {
 @media (min-width: 1200px) {
   #img, #img2 {
     margin-left: 30%; } }
+
+/*scss for #where section */
+#map {
+  height: 400px; }

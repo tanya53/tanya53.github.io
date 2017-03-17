@@ -477,7 +477,7 @@ footer {
   padding-top: 25px;
   margin-top: 2em; }
 
-div > img {
+#logo {
   width: auto;
   height: auto;
   max-width: 100%;
